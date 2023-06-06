@@ -29,7 +29,7 @@ export class AppController {
   }
 
   @Public()
-  @Get('auth/login')
+  @Get('')
   async hello(@Request() req: any, @Body() login: LoginDto) {
     return '<h1>Success</h1>';
   }
