@@ -11,8 +11,8 @@
       "config": { "buildCommand": "npm install --production" }
     },
     {
-      "src": "prisma/schema.prisma",
-      "use": "prisma"
+      "src": "prisma",
+      "use": "npx prisma generate"
     }
   ],
   "routes": [
