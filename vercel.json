@@ -6,6 +6,11 @@
       "use": "@vercel/node"
     },
     {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "buildCommand": "npm install --production" }
+    },
+    {
       "src": "prisma/schema.prisma",
       "use": "@prisma/cli"
     }
