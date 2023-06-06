@@ -2,26 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/**/*.ts",
-      "use": "@vercel/node"
-    },
-    {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "buildCommand": "npm install --production" }
-    },
-    {
-      "src": "prisma",
-      "use": "npx prisma generate"
+      "config": {
+        "buildCommand": "npm i && npx prisma generate && npm run build",
+        "outputDirectory": "dist"
+      }
     }
   ],
   "routes": [
     {
       "src": "/.*",
-      "dest": "src/main.ts"
+      "dest": "dist/src/main.js"
     }
   ],
   "env": {
-    "PRISMA_GENERATE": "true"
+    "NODE_ENV": "production"
   }
 }
