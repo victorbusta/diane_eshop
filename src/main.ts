@@ -33,6 +33,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.use(express.static('public'));
 
-  await app.listen(80);
+  await app.listen(3000);
 }
 bootstrap();
