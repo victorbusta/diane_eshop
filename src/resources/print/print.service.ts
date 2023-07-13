@@ -14,6 +14,9 @@ export class PrintService {
         title: true,
         documentUrl: true,
         formats: true,
+        description: true,
+        current_number: true,
+        initial_number: true,
       },
     });
   }
